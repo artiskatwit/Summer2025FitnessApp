@@ -1,4 +1,4 @@
-package com.example.keical;
+package main;
 
 
 import android.content.Intent; // Imports the Intent class, used for starting new activities or passing messages.
@@ -8,6 +8,8 @@ import android.widget.TextView; // Imports the TextView class, used to display t
 import android.widget.Button; // Imports the Button class, a UI element that the user can tap to trigger an action.
 import androidx.activity.EdgeToEdge; // Imports EdgeToEdge for handling display cutouts and drawing behind system bars.
 import androidx.appcompat.app.AppCompatActivity; // Imports AppCompatActivity, a base class for activities that use the Support Library action bar features.
+
+import com.example.keical.R;
 
 /**
  * MainActivity serves as the primary entry point for the KeiCal application.
