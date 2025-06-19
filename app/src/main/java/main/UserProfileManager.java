@@ -13,11 +13,11 @@ public class UserProfileManager {
     private static final String KEY_GENDER = "gender";
     private static final String KEY_DAILY_CALORIE_GOAL = "daily_calorie_goal";
     // Default Values if no input
-    private static final float DEFAULT_WEIGHT_KG = -1f;
-    private static final int DEFAULT_HEIGHT_CM = -1;
-    private static final int DEFAULT_AGE = -1;
-    private static final String DEFAULT_GENDER = "Unknown";
-    private static final int DEFAULT_DAILY_CALORIE_GOAL = -1;
+    protected static final float DEFAULT_WEIGHT_KG = -1f;
+    protected static final int DEFAULT_HEIGHT_CM = -1;
+    protected static final int DEFAULT_AGE = -1;
+    protected static final String DEFAULT_GENDER = "Unknown";
+    protected static final int DEFAULT_DAILY_CALORIE_GOAL = -1;
 
     public UserProfileManager(Context context) {
         //Initialize SharedPreferences

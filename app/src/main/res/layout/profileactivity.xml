@@ -19,13 +19,12 @@
             android:textSize="24sp"
             android:textStyle="bold"/>
 
+        <!-- Input Fields -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberDecimal"
             android:labelFor="@id/weightEditText"
             android:text="Weight (kg)" />
-
         <EditText
             android:id="@+id/weightEditText"
             android:layout_width="match_parent"
@@ -39,8 +38,8 @@
             android:layout_height="wrap_content"
             android:labelFor="@+id/heightEditText"
             android:text="Height (cm)" />
-
         <EditText
+            android:id="@+id/heightEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -52,8 +51,8 @@
             android:layout_height="wrap_content"
             android:labelFor="@+id/ageEditText"
             android:text="Age" />
-
         <EditText
+            android:id="@+id/ageEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="12dp"
@@ -64,7 +63,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Gender" />
-
         <Spinner
             android:id="@+id/genderSpinner"
             android:layout_width="match_parent"
@@ -75,16 +73,14 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:labelFor="@+id/dailyCalorieGoalEditText"
             android:text="Daily Calorie Goal" />
-
         <EditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
-            android:hint="e.g, 2000"
-            android:inputType="number"
-            android:labelFor="@+id/dailyCalorieGoalEditText" />
+            android:id="@+id/dailyCalorieGoalEditText"
+         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:hint="e.g, 2000"
+        android:inputType="number" />
 
         <Button
             android:id="@+id/saveProfileButton"
@@ -98,8 +94,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
             android:text="Clear Profile" />
 
+        <!-- TextViews to display current saved data -->
         <TextView
             android:id="@+id/currentProfileTitleTextView"
             android:layout_width="wrap_content"
@@ -114,69 +112,40 @@
             android:id="@+id/currentWeightTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="16sp"
             tools:text="Weight: N/A" />
 
         <TextView
             android:id="@+id/currentHeightTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
             tools:text="Height: N/A" />
 
         <TextView
             android:id="@+id/currentAgeTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
             tools:text="Age: N/A" />
 
         <TextView
             android:id="@+id/currentGenderTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
             tools:text="Gender: N/A" />
 
         <TextView
             android:id="@+id/currentCalorieGoalTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:textSize="16sp"
             tools:text="Calorie Goal: N/A" />
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     </LinearLayout>
 </ScrollView>
