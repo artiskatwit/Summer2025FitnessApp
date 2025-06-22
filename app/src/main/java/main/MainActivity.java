@@ -3,9 +3,12 @@ package main;
 
 import android.content.Intent; // Imports the Intent class, used for starting new activities or passing messages.
 import android.os.Bundle; // Imports the Bundle class, used for passing data between activities, typically for saving instance state.
+import android.util.Log;
 import android.view.View; // Imports the View class, the basic building block for user interface components.
 import android.widget.TextView; // Imports the TextView class, used to display text to the user.
 import android.widget.Button; // Imports the Button class, a UI element that the user can tap to trigger an action.
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge; // Imports EdgeToEdge for handling display cutouts and drawing behind system bars.
 import androidx.appcompat.app.AppCompatActivity; // Imports AppCompatActivity, a base class for activities that use the Support Library action bar features.
 
@@ -16,8 +19,7 @@ import com.example.keical.R;
  * It displays a welcome message and provides options for users to sign up, log in,
  * or navigate directly to the calorie tracking feature.
  */
-public class MainActivity extends AppCompatActivity {
-
+public class    MainActivity extends AppCompatActivity {
 
 
     /**
@@ -83,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
              */
             @Override
             public void onClick(View v) {
+
                 // Create an Intent to start the SignUpActivity.
                 // Intents are used to request an action from another app component.
                 // Here, it specifies navigating from MainActivity (this) to SignUpActivity.
@@ -93,47 +96,38 @@ public class MainActivity extends AppCompatActivity {
         }); // End of signUpButton OnClickListener
 
         // Set up a click listener for the Log In button.
-        logInButton.setOnClickListener(new View.OnClickListener() {
-            /**
-             * Called when the Log In button has been clicked.
-             * Navigates the user to the LogInActivity.
-             *
-             * @param v The view that was clicked (in this case, the logInButton).
-             */
-            @Override
-            public void onClick(View v) {
-                // Create an Intent to start the LogInActivity.
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                // Start the LogInActivity.
-                startActivity(intent);
-            }
-        }); // End of logInButton OnClickListener
+        if (logInButton != null) {
+            logInButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
 
-        // Set up a click listener for the Calorie Tracker button.
-        calorieTrackerButton.setOnClickListener(new View.OnClickListener() {
-            /**
-             * Called when the Calorie Tracker button has been clicked.
-             * Navigates the user to the CalorieTrackerActivity.
-             *
-             * @param v The view that was clicked (in this case, the calorieTrackerButton).
-             */
-            @Override
-            public void onClick(View v) {
-                // Create an Intent to start the CalorieTrackerActivity.
-                Intent intent = new Intent(MainActivity.this, CalorieTrackerActivity.class);
-                // Start the CalorieTrackerActivity.
-                startActivity(intent);
-            }
-        }); // End of calorieTrackerButton OnClickListener
+                    Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                    startActivity(intent);
 
-    } // End of onCreate method
 
-    private class SignUpActivity {
-    }
+                }
+            });
 
-    private class LoginActivity {
-    }
+            // Set up a click listener for the Calorie Tracker button.
+            calorieTrackerButton.setOnClickListener(new View.OnClickListener() {
+                /**
+                 * Called when the Calorie Tracker button has been clicked.
+                 * Navigates the user to the CalorieTrackerActivity.
+                 *
+                 * @param v The view that was clicked (in this case, the calorieTrackerButton).
+                 */
+                @Override
+                public void onClick(View v) {
+                    // Create an Intent to start the CalorieTrackerActivity.
+                    Intent intent = new Intent(MainActivity.this, CalorieTrackerActivity.class);
+                    // Start the CalorieTrackerActivity.
+                    startActivity(intent);
+                }
+            }); // End of calorieTrackerButton OnClickListener
 
-    private class CalorieTrackerActivity {
-    }
+        } // End of onCreate method
+
+    } // End of MainActivity class
+
+
 } // End of MainActivity class

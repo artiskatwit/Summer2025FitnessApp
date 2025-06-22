@@ -21,6 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="main.LoginActivity"
+            android:exported="false" /> <!-- Assuming it's only launched from MainActivity -->
+
+        <!-- Declare SignUpActivity, HomeActivity (post-login), ProfileActivity, etc. -->
+
+        <activity android:name="main.ProfileActivity" android:exported="false" />
+
+
     </application>
 
 </manifest>
