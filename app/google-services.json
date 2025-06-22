@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "277617662253",
+    "project_id": "keical",
+    "storage_bucket": "keical.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:277617662253:android:6218f40b2d1d5f69241ba4",
+        "android_client_info": {
+          "package_name": "com.example.keical"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8-SVEM17lynnigZRl8EZpJ03-ARUSaNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
